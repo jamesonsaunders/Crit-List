@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+  user = {};
 
-  constructor() { }
+  constructor(private afAuth: AngularFireAuth,) {
+    this.afAuth.authState.subscribe(user => {
+      if (user)
+        this.user = user;
+    });
+  }
 
   ngOnInit() {
+  }
+
+  signOut() {
+    this.afAuth.auth.signOut().then(() => {
+      location.reload();
+    });
   }
 
 }

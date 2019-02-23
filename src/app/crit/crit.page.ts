@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-crit',
   templateUrl: './crit.page.html',
@@ -10,6 +11,8 @@ export class CritPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
 
 }
