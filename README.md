@@ -15,3 +15,7 @@ Run `ionic serve -c` for a dev server. Navigate to `http://localhost:8100/`. The
 ## Further help
 
 To get more help on the Ionic CLI use `ionic help` or go check out the [Official Ionic Guide](https://ionicframework.com/docs/building/starting).
+
+## License
+
+All rights reserved by Jameson Saunders. You may learn from the code but this app and its code are owned by Jameson Saunders.
