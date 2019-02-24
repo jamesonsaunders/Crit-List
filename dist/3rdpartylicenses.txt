@@ -380,6 +380,15 @@ Apache-2.0
 @firebase/util
 Apache-2.0
 
+@firebase/firestore
+Apache-2.0
+
+@firebase/logger
+Apache-2.0
+
+@firebase/webchannel-wrapper
+Apache-2.0
+
 @ionic/angular
 MIT
 
@@ -647,15 +656,6 @@ BSD
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-@firebase/firestore
-Apache-2.0
-
-@firebase/logger
-Apache-2.0
-
-@firebase/webchannel-wrapper
-Apache-2.0
-
 @angular/router
 MIT
 
@@ -676,12 +676,6 @@ firebase/firestore
 loader
 
 @angular/fire/auth
-MIT
-
-@angular/forms
-MIT
-
-@angular/core
 MIT
 
 firebase/auth
@@ -891,6 +885,12 @@ Apache-2.0
    See the License for the specific language governing permissions and
    limitations under the License.
 
+
+@angular/core
+MIT
+
+@angular/forms
+MIT
 
 zone.js
 MIT
