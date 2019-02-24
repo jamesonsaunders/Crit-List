@@ -7,7 +7,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-  user = {};
+  user: any = {};
 
   constructor(private afAuth: AngularFireAuth,) {
     this.afAuth.authState.subscribe(user => {

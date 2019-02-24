@@ -1,4 +1,9 @@
+<ion-header>
+  <app-list-header [title]="'Critical'" [items]="myList.items" (add)="myList.add()"
+    [loading]="myList.loading"></app-list-header>
+</ion-header>
+
 <ion-content>
-  <app-list [title]="'Critical'" [name]="'crit'" [allowDone]=true [allowLater]=true [allowCrit]=false>
+  <app-list #myList [title]="'Critical'" [name]="'crit'" [allowDone]=true [allowLater]=true [allowCrit]=false>
   </app-list>
 </ion-content>

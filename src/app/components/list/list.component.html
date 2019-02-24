@@ -1,13 +1,4 @@
-<ion-toolbar>
-  <ion-title>{{title}} <span *ngIf="!loading">({{items.length}})</span></ion-title>
-  <ion-buttons slot="end">
-    <ion-button shape="round" color="primary" icon-only (click)="add()">
-      <ion-icon name="add-circle"></ion-icon>
-    </ion-button>
-  </ion-buttons>
-</ion-toolbar>
-
-<ion-list (keyup.enter)="test()">
+<ion-list>
 
   <ion-spinner *ngIf="loading" color="primary"></ion-spinner>
 
@@ -20,18 +11,21 @@
       <ion-item-option color="success" (click)="complete(item)" *ngIf="allowDone" [expandable]="allowDone">
         <ion-icon name="checkmark-circle"></ion-icon>
       </ion-item-option>
-    </ion-item-options>
-    
-    <ion-item-options side="end" (ionSwipe)="delete(item)">
       <ion-item-option color="secondary" (click)="moveByOffset(i, -1)" *ngIf="i !== 0">
         <ion-icon name="arrow-up"></ion-icon>
       </ion-item-option>
       <ion-item-option color="secondary" (click)="moveByOffset(i, 1)" *ngIf="i !== items.length-1">
         <ion-icon name="arrow-down"></ion-icon>
       </ion-item-option>
+      <ion-item-option color="secondary" (click)="crit(item)" *ngIf="allowCrit">
+        <ion-icon name="flash"></ion-icon>
+      </ion-item-option>
       <ion-item-option color="secondary" (click)="later(item)" *ngIf="allowLater">
         <ion-icon name="moon"></ion-icon>
       </ion-item-option>
+    </ion-item-options>
+    
+    <ion-item-options side="end" (ionSwipe)="delete(item)">
       <ion-item-option color="danger" (click)="delete(item)" expandable>
         <ion-icon name="close"></ion-icon>
       </ion-item-option>

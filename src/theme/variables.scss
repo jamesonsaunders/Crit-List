@@ -4,9 +4,14 @@
 /** Ionic CSS Variables **/
 :root {
   --ion-background-color: #3f3f3f;
+  --ion-toolbar-background: #3f3f3f;
   --ion-text-color: #ffffff;
+  --ion-toolbar-color: #ffffff;
 
   ion-alert {
+    input {
+      --ion-background-color: #ffffff;
+    }
     --ion-text-color: #222428;
   }
 
