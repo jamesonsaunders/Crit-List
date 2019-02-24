@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { LoginPage } from './login/login.page';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ export class AppComponent {
     private afAuth: AngularFireAuth,
     private modalCtrl: ModalController,
     private router: Router,
+    private db: AngularFirestore,
   ) {
     this.initializeApp();
   }
@@ -30,6 +32,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
 
       this.afAuth.authState.subscribe(user => {
         if (!user) {

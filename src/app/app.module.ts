@@ -27,7 +27,7 @@ import { TabsPageModule } from './tabs/tabs.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule,
     LoginPageModule,
     TabsPageModule,

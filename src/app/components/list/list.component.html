@@ -11,17 +11,17 @@
       <ion-item-option color="success" (click)="complete(item)" *ngIf="allowDone" [expandable]="allowDone">
         <ion-icon name="checkmark-circle"></ion-icon>
       </ion-item-option>
-      <ion-item-option color="secondary" (click)="moveByOffset(i, -1)" *ngIf="i !== 0">
-        <ion-icon name="arrow-up"></ion-icon>
-      </ion-item-option>
-      <ion-item-option color="secondary" (click)="moveByOffset(i, 1)" *ngIf="i !== items.length-1">
-        <ion-icon name="arrow-down"></ion-icon>
-      </ion-item-option>
       <ion-item-option color="secondary" (click)="crit(item)" *ngIf="allowCrit">
         <ion-icon name="flash"></ion-icon>
       </ion-item-option>
       <ion-item-option color="secondary" (click)="later(item)" *ngIf="allowLater">
         <ion-icon name="moon"></ion-icon>
+      </ion-item-option>
+      <ion-item-option color="secondary" (click)="moveByOffset(i, -1)" *ngIf="i !== 0">
+        <ion-icon name="arrow-up"></ion-icon>
+      </ion-item-option>
+      <ion-item-option color="secondary" (click)="moveByOffset(i, 1)" *ngIf="i !== items.length-1">
+        <ion-icon name="arrow-down"></ion-icon>
       </ion-item-option>
     </ion-item-options>
     
