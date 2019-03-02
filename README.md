@@ -18,4 +18,4 @@ To get more help on the Ionic CLI use `ionic help` or go check out the [Official
 
 ## License
 
-All rights reserved by Bot Group LLC. You may learn from the code but this app and its code are owned by Jameson Saunders.
+All rights reserved by Bot Group LLC. You may learn from the code but this app and its code are owned by Bot Group LLC.
