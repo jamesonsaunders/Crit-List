@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LaterPage } from './later.page';
-import { ComponentsModule } from '../components/components.module';
+import { DonePage } from './done.page';
+import { ComponentsModule } from '../../components/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: LaterPage
+    component: DonePage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ComponentsModule,
   ],
-  declarations: [LaterPage]
+  declarations: [DonePage]
 })
-export class LaterPageModule {}
+export class DonePageModule {}

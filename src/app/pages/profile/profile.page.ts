@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ConstantService } from 'src/app/providers/contstant/constant.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class ProfilePage implements OnInit {
   user: any = {};
 
-  constructor(private afAuth: AngularFireAuth,) {
+  constructor(private afAuth: AngularFireAuth, public constant: ConstantService,) {
     this.afAuth.authState.subscribe(user => {
       if (user)
         this.user = user;

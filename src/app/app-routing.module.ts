@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TabsPage } from './tabs/tabs.page';
+import { TabsPage } from './pages/tabs/tabs.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'tabs', pathMatch: 'full' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'tos', loadChildren: './tos/tos.module#TosPageModule' },
-  { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
+  { path: 'tos', loadChildren: './pages/tos/tos.module#TosPageModule' },
+  { path: 'privacy', loadChildren: './pages/privacy/privacy.module#PrivacyPageModule' },
   {
     path: 'tabs',
     component: TabsPage,
@@ -16,7 +16,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: './crit/crit.module#CritPageModule'
+            loadChildren: './pages/crit/crit.module#CritPageModule'
           }
         ]
       },
@@ -25,7 +25,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: './later/later.module#LaterPageModule'
+            loadChildren: './pages/later/later.module#LaterPageModule'
           }
         ]
       },
@@ -34,7 +34,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: './done/done.module#DonePageModule'
+            loadChildren: './pages/done/done.module#DonePageModule'
           }
         ]
       },
@@ -43,7 +43,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: './profile/profile.module#ProfilePageModule'
+            loadChildren: './pages/profile/profile.module#ProfilePageModule'
           }
         ]
       },

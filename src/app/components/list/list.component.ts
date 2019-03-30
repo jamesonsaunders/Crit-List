@@ -2,8 +2,7 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AlertController } from '@ionic/angular';
-
-const MAX_LIST_SIZE = 100;
+import { ConstantService } from 'src/app/providers/contstant/constant.service';
 
 @Component({
   selector: 'app-list',
@@ -21,26 +20,21 @@ export class ListComponent implements OnInit {
   loading = true;
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFirestore,
-    private alertCtrl: AlertController, ) {
+    private alertCtrl: AlertController, private constant: ConstantService,) {
     
   }
 
   ngOnInit() {
-    console.log(this.name);
-
     this.afAuth.authState.subscribe(user => {
       if (!user)
         return;
 
-      console.log(`users/${this.afAuth.auth.currentUser.uid}/${this.name}`);
-
       this.db.collection(`users/${this.afAuth.auth.currentUser.uid}/${this.name}`, ref => {
         let query = ref.orderBy('pos', 'desc');
-        query = query.limit(MAX_LIST_SIZE);
+        query = query.limit(this.constant.maxListSize);
         return query;
       }).snapshotChanges().subscribe(colSnap => {
         this.items = [];
-        console.log(colSnap.length);
         colSnap.forEach(a => {
           let item = a.payload.doc.data();
           item['id'] = a.payload.doc.id;
@@ -67,7 +61,6 @@ export class ListComponent implements OnInit {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            console.log('Confirm Cancel');
           }
         }, {
           text: 'Ok',
@@ -100,7 +93,6 @@ export class ListComponent implements OnInit {
     if (!text.trim().length)
       return;
 
-    console.log('Confirm Ok');
     let now = new Date();
     let nowUtc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(),
       now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds()));
@@ -111,11 +103,12 @@ export class ListComponent implements OnInit {
       created: nowUtc,
     });
 
-    if (this.items.length >= MAX_LIST_SIZE)
+    if (this.items.length >= this.constant.maxListSize)
       this.alertCtrl.create({
         header: 'Critical Oveload',
         subHeader: 'Too many important items!',
-        message: `You have over ${MAX_LIST_SIZE} items in this list, only showing the top ${MAX_LIST_SIZE}.`,
+        message: `You have over ${this.constant.maxListSize} items in this list,
+only showing the top ${this.constant.maxListSize}.`,
         buttons: ['Okay'],
       }).then(warning => {
         warning.present();
@@ -145,7 +138,6 @@ export class ListComponent implements OnInit {
   }
 
   moveItem(item, list: string) {
-    console.log(`moving ${item.id} from ${this.name} to ${list}`);
     this.db.doc(`users/${this.afAuth.auth.currentUser.uid}/${this.name}/${item.id}`).delete();
 
     let id = item.id;

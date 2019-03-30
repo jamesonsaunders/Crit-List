@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>{{user.displayName}},</h1>
+
+  <h4>Welcome to Crit List!</h4>
+  <p>Each list will only show the top {{constant.maxListSize}} items in it.</p>
+  <p>That way, you will never overload yourself with critical tasks.</p>
+  <p>-Jami Bot (Creator)</p>
+
+  <ion-button color="secondary" (click)="signOut()">Sign Out</ion-button>
+
+</ion-content>

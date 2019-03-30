@@ -14,9 +14,10 @@ import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from 'src/environments/environment';
-import { LoginPage } from './login/login.page';
-import { LoginPageModule } from './login/login.module';
-import { TabsPageModule } from './tabs/tabs.module';
+import { LoginPage } from './pages/login/login.page';
+import { LoginPageModule } from './pages/login/login.module';
+import { TabsPageModule } from './pages/tabs/tabs.module';
+import { ConstantService } from './providers/contstant/constant.service';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { TabsPageModule } from './tabs/tabs.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    ConstantService,
   ],
   bootstrap: [AppComponent]
 })

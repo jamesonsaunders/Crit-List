@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ConstantService } from 'src/app/providers/contstant/constant.service';
 
 @Component({
   selector: 'app-list-header',
@@ -11,7 +12,7 @@ export class ListHeaderComponent implements OnInit {
   @Input('loading') loading: boolean;
   @Output('add') add = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(public constant: ConstantService,) { }
 
   ngOnInit() {}
 }
