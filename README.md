@@ -1,5 +1,8 @@
 # Crit List
 
+DEMO: https://critlist.jamibot.com
+I'm working on a version with some extra features which I'll be releasing for IOS and Android soon. The higher version is also what's seen in the demo.
+
 This project accompanies the [Jami Bot](https://jamibot.com) YouTube video [Ionic 4 Full App Tutorial (Part 1)](https://youtu.be/fiRmjngNALA).
 
 [![Ionic 4 Full App Tutorial (Part 1)](https://img.youtube.com/vi/fiRmjngNALA/0.jpg)](https://youtu.be/fiRmjngNALA)
