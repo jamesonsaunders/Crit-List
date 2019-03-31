@@ -83,7 +83,7 @@ export class ListComponent implements OnInit {
 
     alert.addEventListener('keydown', (val => {
       if (val.keyCode === 13) {
-        this.handleAddItem(val.srcElement['value']);
+        handler({task: val.srcElement['value']});
         alert.dismiss();
       }
     }));
