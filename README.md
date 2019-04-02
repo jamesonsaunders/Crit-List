@@ -11,6 +11,10 @@ The perfect minimal todo list for tracking critical tasks.
 
 If you haven't already, check out the [Jami Bot YouTube Channel](https://youtube.com/c/JamiBot) for web development tutorials.
 
+## Installation
+
+Make sure you run `npm i` when you first download or clone this repo to install all its dependencies.
+
 ## Development server
 
 Run `ionic serve -c` for a dev server. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
