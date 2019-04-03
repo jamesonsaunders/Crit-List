@@ -39,6 +39,10 @@ For a full tutorial on building from Windows, see this video: [Ionic 4 Build App
 
 [![Ionic 4 Build App - Android (Windows tutorial)](https://img.youtube.com/vi/c7HmwiTtYPE/0.jpg)](https://youtu.be/c3CrC9lL53k)
 
+## Further help
+
+To get more help on the Ionic CLI use `ionic help` or go check out the [Official Ionic Guide](https://ionicframework.com/docs/building/starting).
+
 ## License
 
 All rights reserved by Bot Group LLC. You may learn from the code but this app and its code are owned by Bot Group LLC.
