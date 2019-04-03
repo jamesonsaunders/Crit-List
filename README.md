@@ -13,7 +13,7 @@ If you haven't already, check out the [Jami Bot YouTube Channel](https://youtube
 
 ## Installation
 
-Make sure you run `npm i` when you first download or clone this repo to install all its dependencies.
+Download or clone this project, then run `npm i` from the project directory to install its dependencies. Not familiar with NPM? Check out my [NPM Tutorial](https://www.youtube.com/watch?v=mzs-N5hXGuQ).
 
 ## Development server
 
