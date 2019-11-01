@@ -1,16 +1,16 @@
 # Crit List
 
-DEMO: https://critlist.jamibot.com
+DEMO: https://critlist.jamesonsaunders.com
 
 I'm working on a sleeker version with some extra features which I'll be releasing for IOS and Android soon. That higher version is also what's seen in the demo.
 
-This project accompanies the [Jami Bot](https://jamibot.com) YouTube video [Ionic 4 Full App Tutorial (Part 1)](https://youtu.be/fiRmjngNALA) as well as the blog article [Ionic 4 Full App – Crit List](https://blog.jamibot.com/ionic-4-full-app-crit-list).
+This project accompanies the [Jameson Saunders](https://jamesonsaunders.com) YouTube video [Ionic 4 Full App Tutorial (Part 1)](https://youtu.be/fiRmjngNALA) as well as the blog article [Ionic 4 Full App – Crit List](https://blog.jamibot.com/ionic-4-full-app-crit-list).
 
 [![Ionic 4 Full App Tutorial (Part 1)](https://img.youtube.com/vi/fiRmjngNALA/maxresdefault.jpg)](https://youtu.be/fiRmjngNALA)
 
 The perfect minimal todo list for tracking critical tasks.
 
-If you haven't already, check out the [Jami Bot YouTube Channel](https://youtube.com/c/JamiBot) for web development tutorials.
+If you haven't already, check out the [Jameson Saunders YouTube Channel](https://youtube.com/c/JamesonSaunders) for web & mobile development tutorials.
 
 ## Installation
 
